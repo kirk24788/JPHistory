@@ -223,7 +223,23 @@ function jphistory.createAllCastFrames()
 end
 jphistory.createAllCastFrames()
 
-
+function jps.historyToggle(status)
+	if status == 1 then
+		jphistory.frame:Show() -- HIDE
+		jphistory.titleFrame:Show()
+		jphistory.spellTitle:Show()
+		jphistory.targetTitle:Show()
+		jphistory.currentTitle:Show()
+		jphistory.lastTitle:Show()
+	else
+		jphistory.frame:Hide() -- HIDE
+		jphistory.titleFrame:Hide()
+		jphistory.spellTitle:Hide()
+		jphistory.targetTitle:Hide()
+		jphistory.currentTitle:Hide()
+		jphistory.lastTitle:Hide()
+	end
+end
 
 function jphistory.updateTarget(target)
     if not isCasting then
